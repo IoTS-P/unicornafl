@@ -6,7 +6,6 @@ build:
 	mkdir build
 
 unicorn/build/libunicorn-common.a:
-	git submodule update --init --recursive
 	cmake -S unicorn/ -B build/unicorn -D BUILD_SHARED_LIBS=no
 	$(MAKE) -C ./build/unicorn -j8
 
